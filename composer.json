@@ -15,6 +15,7 @@
     "require": {
         "yukdiorder/yuk-helper": "^0.1.0",
         "skyverge/wc-plugin-framework": "^5.10",
-        "automattic/woocommerce": "^3.0"
+        "automattic/woocommerce": "^3.0",
+        "yahnis-elsts/plugin-update-checker": "^4.11"
     }
 }

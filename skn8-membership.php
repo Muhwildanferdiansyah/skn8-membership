@@ -37,9 +37,23 @@ if (!defined('WPINC')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('SKN8_MEMBERSHIP_VERSION', '1.0.0');
+define('SKN8_MEMBERSHIP_VERSION', '1.0.1');
 
 require_once('vendor/autoload.php');
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/Muhwildanferdiansyah/skn8-membership.git',
+	__FILE__,
+	'skn8-membership'
+);
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
+
+//Optional: If you're using a private repository, specify the access token like this:
+$myUpdateChecker->setAuthentication('your-token-here');
+/**
+ * The code that runs during plugin activation.
+ * This action is documented in includes/class-development-activator.php
+ */
 
 //Tool Notice 
 if (!class_exists('Notice')) {

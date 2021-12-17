@@ -1,0 +1,59 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "1a5ba92a5d0f1f7cc5f05396e9eeb6dd",
+    "packages": [
+        {
+            "name": "yukdiorder/yuk-helper",
+            "version": "v0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/naingood/yuk-helper.git",
+                "reference": "49f56e2ab6586f558375824dab71756087d31631"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/naingood/yuk-helper/zipball/49f56e2ab6586f558375824dab71756087d31631",
+                "reference": "49f56e2ab6586f558375824dab71756087d31631",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Yukdiorder\\Helper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Isnainy Nasrullah",
+                    "email": "nain.daftar@gmail.com"
+                }
+            ],
+            "description": "Membantu wordpress developer untuk mengerjakan fungsi - fungsi wordpress sederhana",
+            "support": {
+                "issues": "https://github.com/naingood/yuk-helper/issues",
+                "source": "https://github.com/naingood/yuk-helper/tree/v0.1"
+            },
+            "time": "2020-12-30T07:29:15+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

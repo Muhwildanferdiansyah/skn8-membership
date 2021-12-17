@@ -1,0 +1,20 @@
+{
+    "name": "yukdiorder/membership",
+    "description": "sistem membership untuk mengelola user dan role",
+    "autoload": {
+        "psr-4": {
+            "Yukdiorder\\Membership\\": "includes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "yukdiorder",
+            "email": "nain.client@gmail.com"
+        }
+    ],
+    "require": {
+        "yukdiorder/yuk-helper": "^0.1.0",
+        "skyverge/wc-plugin-framework": "^5.10",
+        "automattic/woocommerce": "^3.0"
+    }
+}

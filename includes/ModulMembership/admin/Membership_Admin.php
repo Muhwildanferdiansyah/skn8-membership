@@ -12,7 +12,7 @@ class Membership_Admin
         add_action('admin_init', [$this, 'enqueue']);
         add_action('admin_init', [$this, 'custom_role']);
         //hook untuk woocommerce produk data tabs
-        // add_filter('woocommerce_product_data_tabs', [$this, 'custom_product_tabs']);
+        add_filter('woocommerce_product_data_tabs', [$this, 'custom_product_tabs']);
         //
         // add_action('woocommerce_product_options_pricing', [$this, 'add_field']);
 

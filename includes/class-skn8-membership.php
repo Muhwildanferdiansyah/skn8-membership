@@ -113,16 +113,16 @@ class Skn8_Membership
 
 
 
-	public function view_home()
-	{
-		// require dirname(__FILE__) . '/view/halaman-depan.php';
-		$current_user = wp_get_current_user();
-		if (0 == $current_user->ID) {
-			// Not logged in.
-		} else {
-			// Logged in.
-		}
-	}
+	// public function view_home()
+	// {
+	// 	// require dirname(__FILE__) . '/view/halaman-depan.php';
+	// 	$current_user = wp_get_current_user();
+	// 	if (0 == $current_user->ID) {
+	// 		// Not logged in.
+	// 	} else {
+	// 		// Logged in.
+	// 	}
+	// }
 
 	public function run_modules()
 	{

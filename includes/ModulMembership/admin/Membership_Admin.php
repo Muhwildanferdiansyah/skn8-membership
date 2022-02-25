@@ -10,9 +10,9 @@ class Membership_Admin
         add_action('admin_menu', [$this, 'membership_slugmenu']);
         add_action('admin_menu', [$this, 'dompet_slugmenu']);
         add_action('admin_init', [$this, 'enqueue']);
-        add_action('admin_init', [$this, 'custom_role']);
+        // add_action('admin_init', [$this, 'custom_role']);
         //hook untuk woocommerce produk data tabs
-        add_filter('woocommerce_product_data_tabs', [$this, 'custom_product_tabs']);
+        // add_filter('woocommerce_product_data_tabs', [$this, 'custom_product_tabs']);
         //
         // add_action('woocommerce_product_options_pricing', [$this, 'add_field']);
 
@@ -40,11 +40,11 @@ class Membership_Admin
 
         // Note the 'id' attribute needs to match the 'target' parameter set above
 ?>
-        <div id='distributor_options' class='panel woocommerce_options_panel'>
-            <?php
+<div id='distributor_options' class='panel woocommerce_options_panel'>
+    <?php
             ?>
-            <div class='options_group'>
-                <?php
+    <div class='options_group'>
+        <?php
                 woocommerce_wp_text_input(array(
                     'id'                => '_valid_for_days',
                     'label'                => __('Distributor', 'woocommerce'),
@@ -59,7 +59,7 @@ class Membership_Admin
 
                 ?></div>
 
-        </div><?php
+</div><?php
             }
 
             public function enqueue()

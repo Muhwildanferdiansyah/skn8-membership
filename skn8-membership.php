@@ -16,7 +16,7 @@
  * Plugin Name:       skn8 membership
  * Plugin URI:        https://www.yukdiorder.com/
  * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            yukdiorder
  * Author URI:        https://www.yukdiorder.com/
  * License:           GPL-2.0+
@@ -41,12 +41,12 @@ define('SKN8_MEMBERSHIP_VERSION', '1.0.1');
 
 require_once('vendor/autoload.php');
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/Muhwildanferdiansyah/skn8-membership.git',
+	'https://github.com/Muhwildanferdiansyah/skn8-membership',
 	__FILE__,
 	'skn8-membership'
 );
 //Set the branch that contains the stable release.
-$myUpdateChecker->setBranch('main');
+$myUpdateChecker->setBranch('master');
 
 //Optional: If you're using a private repository, specify the access token like this:
 $myUpdateChecker->setAuthentication('your-token-here');
@@ -58,20 +58,20 @@ $myUpdateChecker->setAuthentication('your-token-here');
 //Tool Notice 
 if (!class_exists('Notice')) {
 
-	class Notice
-	{
+// 	class Notice
+// 	{
 
-		public function __construct($pesan)
-		{
-			add_action('admin_notices', function () use ($pesan) {
-?>
-				<div class="notice notice-success is-dismissible">
-					<p><?php echo $pesan; ?></p>
-				</div>
-<?php
-			});
-		}
-	}
+// 		public function __construct($pesan)
+// 		{
+// 			add_action('admin_notices', function () use ($pesan) {
+// ?>
+// <div class="notice notice-success is-dismissible">
+    // <p><?php echo $pesan; ?></p>
+    // </div>
+// <?php
+// 			});
+// 		}
+// 	}
 }
 
 
@@ -95,7 +95,7 @@ function activate_skn8_membership()
 	// 		PRIMARY KEY (`ID`) USING BTREE
 	// 	)ENGINE=InnoDB;" . $wpdb->get_charset_collate() . ";";
 
-	// // require(ABSPATH . "/wp-admin/includes/upgrade.php");
+	// require(ABSPATH . "/wp-admin/includes/upgrade.php");
 	// dbDelta($createSQL);
 
 	// $wpdb->insert($wpdb->prefix . 'data', array(

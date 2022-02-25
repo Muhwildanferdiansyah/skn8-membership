@@ -54,8 +54,8 @@ class Skn8_Membership_Admin
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
 		//add_action('admin_menu', [$this, 'skn8_menu']);
-		add_action('rest_api_init', [$this, 'api_members']);
-		add_action('rest_api_init', [$this, 'coupons']);
+		// add_action('rest_api_init', [$this, 'api_members']);
+		// add_action('rest_api_init', [$this, 'coupons']);
 	}
 
 	// public function api_members()
@@ -73,9 +73,9 @@ class Skn8_Membership_Admin
 	// 	]);
 	// }
 
-	public function coupons()
-	{
-	}
+	// public function coupons()
+	// {
+	// }
 
 	/**
 	 * Register the stylesheets for the admin area.

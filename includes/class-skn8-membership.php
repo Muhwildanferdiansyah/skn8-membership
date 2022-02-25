@@ -90,15 +90,8 @@ class Skn8_Membership
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
-
-
+		
 		add_action('admin_menu', [$this, 'membership_menu']);
-
-		// $notice = new Notice(ModulMembership::test_load());
-		// $notice = new Notice(ModulDeposit::test_load());
-
-		// Definisi modular
-
 		$this->set_module(new Yukdiorder\Membership\ModulMembership\ModulMembership());
 		$this->run_modules();
 	}
@@ -108,6 +101,14 @@ class Skn8_Membership
 	public function membership_menu()
 	{
 		add_menu_page('Membership', 'Membership', 'administrator', 'pluginmembership', [$this, 'view_home'], 'dashicons-groups');
+		add_action('init', 'view_home');
+	}
+
+	public function enqueue()
+	{
+
+		wp_enqueue_style('enqueue', function () {
+		});
 	}
 
 
@@ -115,7 +116,12 @@ class Skn8_Membership
 	public function view_home()
 	{
 		// require dirname(__FILE__) . '/view/halaman-depan.php';
-		echo 'plugin Membership';
+		$current_user = wp_get_current_user();
+		if (0 == $current_user->ID) {
+			// Not logged in.
+		} else {
+			// Logged in.
+		}
 	}
 
 	public function run_modules()

@@ -1,14 +1,5 @@
 <?php
 
-
-// use Yukdiorder\Membership\ModulMembership\ModulMembership;
-// use Yukdiorder\Membership\ModulDeposit\ModulDeposit;
-// use Yukdiorder\Membership\ModulDropship\ModulDropship;
-// use Yukdiorder\Membership\ModulStok\ModulStok;
-// use Yukdiorder\Membership\ModulPointReward\ModulPointReward;
-// use Yukdiorder\Membership\ModulAffiliasi\ModulAffiliasi;
-//use Notice;
-
 /**
  * The file that defines the core plugin class
  *
@@ -93,6 +84,7 @@ class Skn8_Membership
 		
 		add_action('admin_menu', [$this, 'membership_menu']);
 		$this->set_module(new Yukdiorder\Membership\ModulMembership\ModulMembership());
+		// $this->set_module(new Yukdiorder\Membership\ModulKomisi\ModulKomisi());
 		$this->run_modules();
 	}
 
@@ -113,16 +105,16 @@ class Skn8_Membership
 
 
 
-	// public function view_home()
-	// {
-	// 	// require dirname(__FILE__) . '/view/halaman-depan.php';
-	// 	$current_user = wp_get_current_user();
-	// 	if (0 == $current_user->ID) {
-	// 		// Not logged in.
-	// 	} else {
-	// 		// Logged in.
-	// 	}
-	// }
+	public function view_home()
+	{
+		// require dirname(__FILE__) . '/view/halaman-depan.php';
+		$current_user = wp_get_current_user();
+		if (0 == $current_user->ID) {
+			// Not logged in.
+		} else {
+			// Logged in.
+		}
+	}
 
 	public function run_modules()
 	{

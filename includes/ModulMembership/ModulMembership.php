@@ -4,7 +4,6 @@ namespace Yukdiorder\Membership\ModulMembership;
 
 use Yukdiorder\Membership\ModulMembership\admin\Membership_Admin;
 use Yukdiorder\Membership\ModulMembership\Membership_Public;
-use Notice;
 
 
 class ModulMembership
@@ -45,10 +44,5 @@ class ModulMembership
     {
         require_once plugin_dir_path(dirname(__FILE__)) . 'ModulMembership/admin/Membership_Admin.php';
         require_once plugin_dir_path(dirname(__FILE__)) . 'ModulMembership/public/Membership_Public.php';
-    }
-
-    public static function test_load()
-    {
-        // return 'Membership udah kebaca';
     }
 }
